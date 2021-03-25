@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".presentation.books.BooksActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -20,7 +21,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/toolbarMain"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_book" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
