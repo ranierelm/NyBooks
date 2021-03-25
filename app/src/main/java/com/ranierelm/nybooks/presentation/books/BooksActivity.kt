@@ -2,6 +2,7 @@ package com.ranierelm.nybooks.presentation.books
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ranierelm.nybooks.R
@@ -27,6 +28,9 @@ class BooksActivity : AppCompatActivity() {
             setHasFixedSize(true)
             adapter = BooksAdapter(getBooks())
         }
+
+        val viewModel: BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)
+
     }
 
     //Dados criados para testar a chamada ao adapter
