@@ -28,8 +28,9 @@ class BooksActivity : AppCompatActivity() {
         //ViewModel escutando através do LiveData
         viewModel.booksLiveData.observe(this, Observer {
             it?.let { books ->
-                with(binding.recyclerBooks){
-                    layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+                with(binding.recyclerBooks) {
+                    layoutManager =
+                        LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
                     setHasFixedSize(true)
                     adapter = BooksAdapter(books)
                 }
@@ -37,8 +38,6 @@ class BooksActivity : AppCompatActivity() {
         })
         //Chamada do getBooks do ViewModel
         viewModel.getBooks()
-
-
     }
 
 
