@@ -7,12 +7,12 @@ object ApiService {
 
     private fun initRetrofit(): Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://api.github.com/https://api.nytimes.com/svc/books/v3/")
+            .baseUrl("https://api.nytimes.com/svc/books/v3/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
     }
 
-    val service = initRetrofit().create(NYTServices::class.java)
+    val service: NYTServices = initRetrofit().create(NYTServices::class.java)
 
 
 }
