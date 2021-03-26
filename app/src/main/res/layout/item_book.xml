@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
+        android:layout_marginBottom="8dp"
         tools:text="Title" />
 
     <TextView
@@ -20,5 +21,12 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         tools:text="Autor" />
+
+    <View
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C4756E6E"
+        android:focusable="false"/>
 
 </LinearLayout>
